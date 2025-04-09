@@ -9,18 +9,9 @@ jobs:
     steps:
      - name: checkout code
        uses: actions/checkout@v4
+
+     - name: List files
+       run: ls -ltra  
      
-     - name: Install cowsay pgm
-       run: sudo apt-get install -y cowsay
-
-     - name: Execute cowsay cmd
-       run: cowsay -f dragon "Run for cover, run for fun!" >> dragon.txt
-
-     - name: check file exists
-       run: grep -i "cover" dragon.txt
-
-     - name: read file
-       run: cat dragon.txt
-
-     - name: list repo files
-       run: ls -ltra
+     - name: Executing shell script
+       run: ./ascii-script.sh
