@@ -11,4 +11,4 @@ jobs:
              
           - name: List files
             run: ls
-            working-directory: .
+            working-directory: action-1
