@@ -10,5 +10,4 @@ jobs:
             run: echo "My first Github Actions Job"
              
           - name: List files
-            run: ls
-            working-directory: action-1
+            run: pwd
