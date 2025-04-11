@@ -10,7 +10,7 @@ jobs:
         fail-fast: true
         max-parallel: 1
         matrix:
-           os: [ubuntu-latest, ubuntu-22.04, windwows-latest]
+           os: [ubuntu-latest, ubuntu-22.04, windows-latest]
            images: [hello-world, alpine]
            exclude:
              - images: alpine
@@ -18,10 +18,10 @@ jobs:
            include:
              - images: amd64/alpine
                os: ubuntu-20.04
-    runs-on: ${{ matrix.os}}
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Echo Docker details
         run: docker info
       
       - name: run images on ${{ matrix.images }}
-        run: docker run ${{ matrix.images}}
+        run: docker run ${{ matrix.images }}
